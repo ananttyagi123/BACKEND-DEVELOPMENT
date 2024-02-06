@@ -1,0 +1,22 @@
+{
+  "Title": "Harray Potter and the Goblet of Fire",
+  "Author": "J.K Rowling",
+  "Genre": "Fantasy",
+  "Detail": {
+    "Publisher": "Bloomsbury",
+    "Publication": "Year - 2000",
+    "ISBN-13": "0-7475-4624-X",
+    "Language": "English",
+    "Pages": 636
+  },
+  "Price": [
+    {
+      "type": "hardcover",
+      "Price": 1599
+    },
+    {
+      "type": "E-book",
+      "Price": 2000
+    }
+  ]
+}
