@@ -16,6 +16,7 @@
 
 // IMPORT MODULE OF  A FILE SYSTEM
 
+const { error } = require("console");
 var fs = require("fs");
 var b = fs.readFileSync('hello2.json', { encoding: "utf8" });
 console.log(b);
@@ -36,4 +37,13 @@ fs.readFile('hello2.json',(err,data)=>{
 })
 
 
+
+// WRITING IN A FILE 
+var m = fs.writeFileSync('hello2.json',"hello my name is Anant Tyagi");
+console.log(b);
+
+fs.write('hello2.json',parsed,(err)=>{
+  if(err) return error
+  console.log("DATA WRITTEN SUCESSFULLY")
+});
 
