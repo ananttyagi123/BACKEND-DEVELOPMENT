@@ -24,13 +24,13 @@ const parseData = JSON.parse(b);
 console.log(parseData);
 
 
-// EATING FILE ASYNCHRONOUS
+// CREATING FILE ASYNCHRONOUS
 
-fs.readFile('hello2.json',(err,data)=>{
-  if(err){
+fs.readFile('hello2.json', (err, data) => {
+  if (err) {
     return err;
   }
-  else{
+  else {
     let parse = JSON.parse(data);
     console.log(parse);
   }
@@ -39,11 +39,17 @@ fs.readFile('hello2.json',(err,data)=>{
 
 
 // WRITING IN A FILE 
-var m = fs.writeFileSync('hello2.json',"hello my name is Anant Tyagi");
+var m = fs.writeFileSync('hello2.json', "hello my name is Anant Tyagi");
 console.log(b);
 
-fs.write('hello2.json',parsed,(err)=>{
-  if(err) return error
+fs.write('hello2.json', parsed, (err) => {
+  if (err) return error
   console.log("DATA WRITTEN SUCESSFULLY")
 });
+
+// File System 
+// controll tthe file async and sync 
+// in this File System what we have dome is that we are writing a file data and the
+// extract it update and delete it
+
 
