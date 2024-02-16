@@ -40,6 +40,10 @@ var comp = buf4.compare(buf5);
 console.log(comp);
 
 
+// COPYING IN BUFFER
+
+var copybuff = buf4.copy(buf5);
+console.log(copybuff);
 
 
 // types of encoding 
