@@ -27,6 +27,20 @@ console.log(buf1.toString('base64'));
 console.log(buf1.toString('utf-16le'));
 console.log(buf.toString('utf8'));
 
+var buf3 = new Buffer.alloc(50);
+n = buf3.write('this is a Node.js Class');
+console.log('');
+
+var buf4  = Buffer.from('wow');
+var buf5 = Buffer.from('hell');
+
+var buf7 = Buffer.concat([buf4,buf5]);
+console.log(buf7.toString());
+var comp = buf4.compare(buf5);
+console.log(comp);
+
+
+
 
 // types of encoding 
 // encoding from buffer 
