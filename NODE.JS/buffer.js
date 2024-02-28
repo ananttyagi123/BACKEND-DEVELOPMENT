@@ -19,6 +19,9 @@ console.log(buf);
 console.log(buf.fill('a'));
 const buf1 = Buffer.from('Anant');
 console.log('encoding-----------------');
+
+// TYPES OF ENCODING 
+
 console.log('--------------------------------------------');
 console.log(buf1.toString('hex'));
 console.log(buf1.toString('ascii'));
@@ -42,9 +45,13 @@ console.log(comp);
 
 // COPYING IN BUFFER
 
-var copybuff = buf4.copy(buf5);
+var copybuff = buf4.copy(buf5,2);
 console.log(copybuff);
 
 
-// types of encoding 
-// encoding from buffer 
+const buf8 = Buffer.alloc(34).fill('fdgsdjfnsffkdgsdfkfsdfkfdjgfdnfsdkfjfddkjfsd');
+const buf9 = Buffer.alloc(34).fill('?');
+buf8.copy(buf9,4,7);
+console.log(buf8.toString('utf8',0,8));
+
+
