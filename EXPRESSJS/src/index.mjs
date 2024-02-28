@@ -26,26 +26,28 @@ const userData = [{ id: 1, product: "Anant" }, { id: 2, product: "Anant" },
 { id: 3, product: "Anant" }, { id: 4, product: "Anant" }]
 
 app.get('/', (request, response) => {
-  response.status(201).send("hello");
-})
+  response.send("<H1>hello</H1>");
+});
 
-app.get('/api/user', (request, response) => {
+
+app.get('/api/user/', (request, response) => {
   response.status(201).send([{ id: 1, username: "Anant" },
-  { id: 1, username: "Anant" }, { id: 1, username: "Anant" }, { id: 1, username: "Anant" }]
+  { id: 2, username: "Anant" }, { id: 3, username: "Anant" }, { id: 4, username: "Anant" }]
   )
 })
 
 // create a User 
 
-app.post("/api/user", (request, response) => {
-   const {body} = request;
-    const newUser = { id: userData[userData.length - 1].id + 1 , ...body }
+ app.post("/api/user", (request, response) => {
+  const { body } = request;
+   const newUser = { id: userData[userData.length - 1].id + 1, ...body }
   userData.push(newUser);
   return response.status(200).send(newUser);
-})
+ })
 
 app.get('/api/product', (request, response) => {
   response.status(201).send(
+    console.log("Hello world!1")
   )
 })
 
@@ -59,7 +61,3 @@ app.get('/api/product/:id', (request, response) => {
   if (!findUser) return response.sendStatus(404);
   return response.send(findUser);
 })
-
-// query param
-// creating  a data throught POST request 
-
